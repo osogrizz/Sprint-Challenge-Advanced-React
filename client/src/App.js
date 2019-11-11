@@ -34,7 +34,7 @@ export class App extends Component {
 
 
   render() {
-    return (
+    return (  
       <div className="App">
         <Navbar />
         <Players players={this.state.players}/>
