@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 
+
+import Navbar from './components/navbar'
 import Players from './components/players'
+import './App.css'
 
 export class App extends Component {
   constructor() {
     super()
 
     this.state = {
-      players: []
+      players: [],
+      darkMode: false
     }
   }
 
@@ -32,6 +36,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar />
         <Players players={this.state.players}/>
       </div>  
     )

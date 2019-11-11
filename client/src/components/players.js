@@ -4,11 +4,12 @@ import styled from 'styled-components'
 import Player from './player'
 
 const Players = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <PlayerContainer>
       {props.players.map( player => (
-        <Player 
+        <Player
+          key={player.id} 
           id={player.id}
           name={player.name} 
           country={player.country} 
