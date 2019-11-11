@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Players from './components/players'
+
 export class App extends Component {
   constructor() {
     super()
@@ -14,7 +16,7 @@ export class App extends Component {
       fetch('http://localhost:5000/api/players')
       .then(res => res.json())
       .then(players => {
-        console.log(players)
+        // console.log(players)
         this.setState({
           players: players
         })
@@ -29,11 +31,13 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
-
-      </div>
+      <div className="App">
+        <Players players={this.state.players}/>
+      </div>  
     )
   }
 }
 
 export default App
+
+
